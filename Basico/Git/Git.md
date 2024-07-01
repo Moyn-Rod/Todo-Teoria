@@ -256,7 +256,7 @@
 
 # Sintaxis de un commit 
 
-- <type>(breve descripcion)[area o contexto]<descripcion>.
+- < type >(breve descripcion)[area o contexto]< descripcion >.
     - fix:
         - Cuando arreglamos un bug.
     - feat:
