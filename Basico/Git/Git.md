@@ -65,6 +65,30 @@
     - issues(problemas)
     - pull request(extracciones)
 
+# Crear repositorio en github
+
+**Primera Forma**
+    - Creo el repositorio en github.
+    - Realizo el git clone URL para clonarlo en mi repositorio local.
+    - Realizo git init  para iniciar el repositorio.
+    - git commit -m "nombre del commit". para guardar los archivos.
+    - git push para pushear los cambios.
+
+**Segunda Forma(inicio el repositorio de forma local desde cero)**
+    - Git init para iniciar el repositorio.
+    - git add. para agregar los archivos al stagind area.
+    - git remote add origin URL para añadir el repositorio remoto a donde vamos a realizar el push.
+    - git breach -M main : cambio el nombre de mi rama a main (fuerzo el cambio por eso -M) 
+    - git commit -m "Nombre del commit" para guardar los cambios.
+    - git push URL main -u para pushear los cambios y los futuros cambios a la rama main.
+
+**Tercera Forma (cuando ya tengo un repositorio local existente)**
+    - git remote add origin URL para añadir el repositorio remoto a mi repo local.
+    - git add . para agregar los archivos a la stagin area.
+    - git breach -M main para cambiar el nombre de mi rama  a main
+    - git commit -m "nombre del commit" para guardar los cambios en git.
+    - git push URL main -u para indicarle que los cambios se guarden en mi rama main. 
+
 
 # En caso de Problemas con sistema Operativo 
 
@@ -134,6 +158,8 @@
     - Ya se hizo el commit.
 
 # Comandos de git.
+
+- Git remote add 
 
 - Git add `nombre de archivo` o git add . (agrega todos los cambios directamente) :
     - Envia los archivos al stagin area.
@@ -296,6 +322,7 @@
         - 2.1.1(parche):
             - Cuando se corrigen errores.
             - pequeñas mejoras.
+            - Se corrigen bugs.
         
 
 
