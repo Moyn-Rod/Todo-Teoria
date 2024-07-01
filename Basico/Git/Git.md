@@ -280,6 +280,23 @@
 # Versiones:
 
 
+- Las versiones nos muestan los cambios que se le van realizando a una app.
+- existen distintos niveles de versioens 
+    - Supongamos un 2.0.0
+
+        - 2(mayor):
+            - Indica la parte mayor de una versiones 
+            -  Si se realiza un cambio importante que no permite compatibilidad con una version anterior.
+            - caracteristicas nuevas o cambios estructurales importantes.
+
+        - 2.1.0(menor):
+            - Se realizan cambios en ciertas dependencias o caracteristicas pero continuca siendo compatible con la version anterior.  
+            - una mejora o una nueva funcionalidad
+
+        - 2.1.1(parche):
+            - Cuando se corrigen errores.
+            - pequeñas mejoras.
+        
 
 
 
