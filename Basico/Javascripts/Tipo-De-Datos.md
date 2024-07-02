@@ -1,8 +1,15 @@
 # Tipos De Datos
 
 - Existen 6 tipos de datos.
+- Estos datos se dicen que son primitivos y poseen sus propios metodos.
+- Ñ
 
-    - Number: Numeros positivos negativos y no enteros.
+***Number***
+
+ Numeros positivos negativos y no enteros.
+
+
+
     - String: Secuencia o conjunto de caracteres que generan un texto o un bloque de texto.
     - Boolean: true o false.
     - NaN: Nat a Number, cuando no encuentra un resultado, no es un numero valido.
