@@ -2,6 +2,8 @@
 Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 
 # Basico
+
+##GIT.MD##
 - Controlador de Versiones.
 - Distintos controladores de versiones.
 - Que es git.
