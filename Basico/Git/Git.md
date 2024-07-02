@@ -35,7 +35,7 @@
         
         - Subversion:
             - Centralizado.
-            - Se utiliza para control de versiones robustos.
+            - Se utiliza para control de versiones robustos.clear
 
         - Apache Subversion:
             - Centralizado.
@@ -161,7 +161,8 @@
 
 # Comandos de git.
 
-- Git remote add 
+- Git remote add origin URL
+    - Agregamos un repo remoto a nuesto repo local.
 
 - Git add `nombre de archivo` o git add . (agrega todos los cambios directamente) :
     - Envia los archivos al stagin area.
@@ -270,7 +271,7 @@
 - git branch <nombre_De_la_rama>:
     - Crea y nos mueve hacia esa rama.
 
--git branch -d <nombre_De_la_Rama>:
+- git branch -d <nombre_De_la_Rama>:
     - Para eliminar una rama.
     - Debo estar parado en otra misma rama. 
     - Si una rama no se a fusionado nunca se debera forzar la eliminacion con -D.
@@ -306,6 +307,17 @@
         - Realice cambios menores que no molesta en nada ni modifica nada.
 
 **Hash**
+
+- Los hashing se crean a partir de una suma de verificacion de algun archivo.
+- nos da como resultado siempre un numero hexagesimal. 
+- dependiendo de que tipo de hashing va a tener distingas longitudes.
+- el mismo valor siempre va a dar el mismo hash.
+
+    - m5: 16 caracteres. (128 bits).
+    - sha-1: 40 caracteres. (160 bits).
+    - sha-256: 64 caracteres. (256 bits).
+    - sha-384: 96 caracteres. (384 bits)
+    - sha-512: 128 caracteres. (512bits).
 
 
 # Versiones:
