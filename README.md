@@ -11,6 +11,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Estados y ciclos de vida de los archivos.
 - Comandos git.
 - Como crear repositorios.
+- Sintaxis de un commit.
 - Que es el hash.
 - Que son las versiones.
 
