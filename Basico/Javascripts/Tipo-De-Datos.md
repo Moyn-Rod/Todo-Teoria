@@ -17,7 +17,7 @@
 - Existen 7 tipos de datos.
 - Estos datos se dicen que son primitivos e inmutables y poseen sus propios metodos.
 
-**Por que Inmutables**
+# Por que Inmutables
 
 - Se refiere a que los valores primitivos no pueden ser modificados.
 - La unica forma de modificarlos es reasignarlos en una nueva variable, es decir, crear un nuevo valor.
@@ -40,7 +40,7 @@ console.log(algo);  // No es que bar cambio su valor, en realidad se creo una co
 console.log(bar);// Bar sigue con su mismo valor.
 ```
 
-***Number***
+# Number
 
 - Numeros positivos,negativos y de punto flotante.
 - js utiliza el formato IEEE754 en donde existe una presicion de 64 bit 
@@ -49,12 +49,12 @@ console.log(bar);// Bar sigue con su mismo valor.
     - 11 bit a numeros de punto flotante. 
     - 1 bit al signo (positivo o negativo). 
 
-- Posee 3 numeros especiales.
-    - Infinity: Infinito
-    - - Infinito: infinito negativo.
-    - Nan: Not a number, un error de calculo.
+***Posee 3 numeros especiales.***
+- Infinity: Infinito
+- - Infinito: infinito negativo.
+- Nan: Not a number, un error de calculo.
 
-- 3 formas de representar un numero. 
+***formas de representar un numero.***
 
 ```js
  let a =1000000 // de forma comun esto seria 1 millon.
@@ -66,20 +66,20 @@ console.log(bar);// Bar sigue con su mismo valor.
  let d = 1e-6 // son 6 seros a la izquierda.
 ``` 
 
-- Problemas debido a la presicion doble de 64bit segun norma ieee754
-    - si escribimos numeros tales como 0.1 o 0.2, estos al pasarlos a binarios darian numeros infinitos.
-    - Por ende al sumarlos daria un error de presicion.
-    - Soluciónes:
-        - Redondear los valores sea
-            - toFixed()
-            - math.Round()
+***Problemas debido a la presicion doble de 64bit segun norma ieee754***
+- si escribimos numeros tales como 0.1 o 0.2, estos al pasarlos a binarios darian numeros infinitos.
+- Por ende al sumarlos daria un error de presicion.
+- Soluciónes:
+    - Redondear los valores sea
+        - toFixed()
+        - math.Round()
         - Multiplicarlos por 10.
-***BigInt**
-    - Se utiliza cuando debemos representar valor mayores 2^53-1 y menores a -2^53-1
-    - Es una biblioteca que permite utilizar estos numeros.
-    - Para utilizar esta biblioteca simplemente agregas una n al final o lo llamas como si fuera un metodo.
-    - No pueden ser mezclados con numeros comunes, hay que mezclarlos a todos.
-    - No se le puede aplicar algunos metodos (como math).
+# BigInt
+- Se utiliza cuando debemos representar valor mayores 2^53-1 y menores a -2^53-1
+- Es una biblioteca que permite utilizar estos numeros.
+- Para utilizar esta biblioteca simplemente agregas una n al final o lo llamas como si fuera un metodo.
+- No pueden ser mezclados con numeros comunes, hay que mezclarlos a todos.
+- No se le puede aplicar algunos metodos (como math).
 
 ```js
 let a =Number.MAX_SAFE_INTEGER //9007199254740991 numero mayor que se puede representar con presicion.
@@ -90,13 +90,82 @@ let c= 9007199254740991n +9007199254740991n // Aplicando BigInt 1801439850948198
 let d =BigInt(a)  // Otra forma de aplicar BigInt
 
 let e=BigInt(c+c) // Si Ambos numeros son BigInt puedo sumarlos tranquilamente 
-
 ```
 
 
-***String***
+# String
 
--Secuencia o conjunto de caracteres que generan un texto o un bloque de texto.
+- Secuencia o conjunto de caracteres que generan un texto o un bloque de texto.
+
+- Unicode:
+    - Unicode es un estandar universal que nos permite representar cada letra,emoji,signo u simbolo de los idiomas del mundo en un unico codigo.
+    - Existen ademas otros estandares segun el pais ojo con lo que haces.
+
+    - UTF
+        - Nos permite transcribir estos codigos a el lenguaje de computadoras. 
+
+        - utf-8 :
+            - guarda cada letra u simbolo en espacioes de 1 a 4 bytes.
+            - Sirve mas para idiomas occidentales.
+
+        - utf-16 :
+            - Guarda cada letra u simbolo en espacios de 1 a 2 bytes.
+            - Sirve mas para idiomas orientales.
+
+***Formas de representar un string*** 
+
+- Forma comun de js (comillas dobles).
+```js
+let b =0
+let a = "esto es un string normal"+ " "+b // No respeta los espacios Hay que agregar los espacios manualmente +" "+ 
+                                         // Para concatenar hay que utilizar el signo + 
+                                  
+```
+- Temple String.
+
+```js
+let m =0;
+
+let a = `hola como estas ${m}` // respeta los espacios.
+                              // para concatenar se utiliza ${}
+
+```
+
+- Comilla Simples 
+    - Es exactamente igual que las comillas dobles.
+```js
+let b =0
+let a = 'esto es un string normal'+ ' '+b // No respeta los espacios Hay que agregar los espacios manualmente +" "+ 
+                                         // Para concatenar hay que utilizar el signo + 
+
+```
+
+***Acceder a una parte de un sting y medir su longitud***
+- Para medir su longitud utilizo el metodo length.
+    - Comienza desde 1.
+    - Cuenta el numeros de caracteres que se utiliza.
+- Para ingresar a un string puedo utilizar el sistema de corchetes.
+    - cada letra tiene su propio indice (comenzando desde 0).
+
+```js
+let a =`hola` 
+
+console.log(a.length) // devolveria 4 por que cuenta el numero de caracteres.
+console.log(a[0])     // Devolveria la letra `H` por que sus indices empiezan desde 0 
+
+```
+
+***Caracteres Especiales***
+- Sirven para poder utilizar simbolos,
+- Siempre se utiliza \ dentro de los string.
+- Puede utilizar pegada a la palabra o separada.
+
+```js
+let a = `HOLA \n a` // tabulacion ( manda hacia abajo la letra a ) 
+let b = `HOLA \t a` // un salto de linea.
+let c = `HOLA \` a\``// Comillas u otros signos como // / `` "" de esta forma de ponen.
+let d = `HOLA \u266` //  Caracter unicode       
+```
 
 
 
