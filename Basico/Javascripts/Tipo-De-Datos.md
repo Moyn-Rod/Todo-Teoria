@@ -74,11 +74,30 @@ console.log(bar);// Bar sigue con su mismo valor.
             - toFixed()
             - math.Round()
         - Multiplicarlos por 10.
+***BigInt**
+    - Se utiliza cuando debemos representar valor mayores 2^53-1 y menores a -2^53-1
+    - Es una biblioteca que permite utilizar estos numeros.
+    - Para utilizar esta biblioteca simplemente agregas una n al final o lo llamas como si fuera un metodo.
+    - No pueden ser mezclados con numeros comunes, hay que mezclarlos a todos.
+    - No se le puede aplicar algunos metodos (como math).
+
+```js
+let a =Number.MAX_SAFE_INTEGER //9007199254740991 numero mayor que se puede representar con presicion.
+let b =Number.MIN_SAFE_INTEGER //-9007199254740991 numero menor que se puede representar con presicion.
+
+let c= 9007199254740991n +9007199254740991n // Aplicando BigInt 18014398509481982n No habra problemas de presicion.
+
+let d =BigInt(a)  // Otra forma de aplicar BigInt
+
+let e=BigInt(c+c) // Si Ambos numeros son BigInt puedo sumarlos tranquilamente 
+
+```
 
 
 ***String***
 
-    Secuencia o conjunto de caracteres que generan un texto o un bloque de texto.
+-Secuencia o conjunto de caracteres que generan un texto o un bloque de texto.
+
 
 
     - Boolean: true o false.
