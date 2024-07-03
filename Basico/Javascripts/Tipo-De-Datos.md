@@ -169,25 +169,37 @@ let d = `HOLA \u266` //  Caracter unicode
 
 
 
-    - Boolean: true o false.
-    - NaN: Nat a Number, cuando no encuentra un resultado, no es un numero valido.
-    - Undefined: Un valor que lanza js cuando no se retorna nada.
-    - null: Un valor que asignamos cuando intencionalmente cuando no queremos que retorne nada.
+ # Boolean: 
+- Los valor boleanos indican true o false.
+- 0 o 1 
+    
+    
+# NaN:
+- Nat a Number, cuando no encuentra un resultado, no es un numero valido.
 
-# Variables
-- Las variables nos permiten almacenar el valor de algo para utilizarlo luego.
-- Todo se puede almacenar en una variable.
-    - Arrays.
-    - Objetos.
-    - numeros.
-    - Caracteres.
-- Asignamos un valor a la variable.
+
+# Undefined: 
+-Un valor que lanza js cuando no se retorna nada
+- No Encuentra un valor definido
+
+# null:
+- Un valor que asignamos cuando intencionalmente cuando no queremos que retorne nada.
+
+# symbol
+
+- Symbol nos permite crear claves unicas en nuestros objetos.
+- Nos brinda mayor seguridad.
+- Evita colisiones, si 2 simbols poseen la misma clave, seguirian siendo distintas.
+- No se pueden acceder mediante bucles, debido a que no son emnumerables.
+- Poseen sus propias propiedades y metodos no pueden accederse con las propiedades de objetos normales.
 
 ```js
-    var nombreVariable =9;
-```
-- Existen 3 Keywoards de nombrar variables.
+let a  = Symbol()               // Asi se crea un symbol.
+let b  = Symbol(`descripcion`) // Se le puede agregar descripciones.
 
-    - Var
-    - Let
-    - Const
+let obj={
+    [a]:`valor symbol`         
+}                             // Para agregarlo a un obj va entre corchetes.
+
+```
+
