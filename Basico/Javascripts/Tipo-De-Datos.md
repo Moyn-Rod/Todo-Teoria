@@ -202,4 +202,21 @@ let obj={
 }                             // Para agregarlo a un obj va entre corchetes.
 
 ```
+# Como Preguntar que tipo de dato es 
 
+```js
+// preguntando el tipo de dato con () es una sintaxis-.
+typeof(a);
+
+
+//preguntando el tipo de dato sin () tbm se puede escribir asi 
+typeof b;
+
+
+// preguntando si 2 tipos de datos son iguales.
+typeof a===typeof b;
+
+
+// preguntando si es de tipo number (CUIDADO COMO ESCRIBIS EL TIPO DE DATO POR QUE PUEDE DAR ERROR )
+typeof a =='number';
+```
