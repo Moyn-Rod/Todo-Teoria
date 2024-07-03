@@ -41,7 +41,36 @@
 - podriamos decir que se va generando una pila de ejecución.
 - En caso de que se encuentre una variable sin declarar dentro de un contexto el ( outter enviroment ) sale de ese contexto hacia el superior  y se fija si existe alguna variable que contenga esta
      
+# Tipo de errores.
 
+- Error de sintaxis
+    - Existe algun error en la sintaxis del codigo.
+
+- Error semantico
+    - Existe algun error en los bucles o en el funcionamiento.
+
+- Error de programacion
+    - Cuando no hace lo que quiero que haga.
+
+***Cuando se muestra el error***
+-  Cuando es un error de sintaxis o semantico el syntax parser te avisa.
+-  Cuando es un error de programacion se muestra cuando se ejecuta el codigo.
+
+# Herencia de Objetos Basado En Prototipos
+
+- Basicamente todas las estructuras de datos de js son un objetos. 
+- Los datos primitivos en si no son objetos pero para que js pueda aplicar sus propiedades y metodos se envuelven en un obj temporal.
+- Todas las demas estructuras de datos son objetos.
+    - Array.
+    - Objetos literales.
+    - funciones.
+    - Regex.
+    - Map.
+    - Set.
+    - Date.
+
+- Como js Posee un sistema de herencia basada en prototipos todos estos objetos poseen metodos y propiedades
+- En caso de los 
 
 
 # Hoisting
@@ -52,6 +81,5 @@
 
 # Valor y referencia
 
-# Herencia de Objetos Basado En Prototipos
 
 # Tipos De Errores

@@ -192,6 +192,16 @@ let d = `HOLA \u266` //  Caracter unicode
 - Evita colisiones, si 2 simbols poseen la misma clave, seguirian siendo distintas.
 - No se pueden acceder mediante bucles, debido a que no son emnumerables.
 - Poseen sus propias propiedades y metodos no pueden accederse con las propiedades de objetos normales.
+- Se puede apreciar 8 tipos de datos distintos.
+    - `number`
+    - `String`
+    - `undefined`
+    - `Object`
+    - `function`
+    - `symbol`
+    - `BigInt`
+    - `Boolean`
+    - `Null y array son Object.`
 
 ```js
 let a  = Symbol()               // Asi se crea un symbol.
