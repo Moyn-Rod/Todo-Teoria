@@ -69,8 +69,61 @@
     - Set.
     - Date.
 
-- Como js Posee un sistema de herencia basada en prototipos todos estos objetos poseen metodos y propiedades
-- En caso de los 
+- Como js Posee un sistema de herencia basada en prototipos todos estos objetos poseen metodos y propiedades.
+- Para agregar funciones al prototipo de algun objeto se utiliza:
+```js
+  let array=[1,2,3,4,5];
+  
+ array.prototype.sum=function (){
+        return this.reduce()=>
+ }
+``` 
+
+# Funciones Constructoras y Function Clase
+- Estas funciones se agregaron por marketing, es decir, para que sea mas comodo para los que vienen de codear con otros lenguajes.
+- Estas funciones se utilizan para crear objetos que seran repetitivos.
+- Las funciones constructoras o funciones de clase son como plantillas que vamos a utilizar para crear objetos.
+- Las funciones constructoras siempre van La primera sigla con mayuscula.
+- Las funciones constructoras pueden retornar 2 cosas 
+    - Retornar un objeto que ponemos manualmente.
+    - Retornar  la nueva instancia que creamos.
+
+***New y This***
+
+```js
+function Persona(){
+    this.name=`Raul`,
+    this.apellido=`Mendez`
+};
+
+let Nuevo=new Persona();
+```
+- New:
+    - New es un operador que se utiliza para crear instancias de objetos.
+    - Como funciona:
+        - Crea un objeto vacio.
+        - Bindea este objeto y la fn constructora
+        - como el this ahora pertenece al contexto del objeto nuevo hace referencia al mismo.
+```js
+function Persona(nombre,apellido){
+    this.name=nombre;
+    this.apellido=apellido;
+}
+
+const nuevo=new Persona('Raul' 'Ricardo')  // Aqui estamos creando una nueva instancia de la fn constructora.
+
+function Animal(raza,años){
+    this.raza=raza;
+    this.años=años;
+
+    return {messaje:'existe un nuevo perro'};
+}
+```
+
+
+- This:
+    - This hace referencia al contexto en el que lo llaman 
+
 
 
 # Hoisting

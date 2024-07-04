@@ -25,6 +25,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Como esta formado.
 - Como funciona.
 - Como Maneja los errores.
-- Como Esta orientado a objetos.
-- Coercion De Datos.
-- Valor y referencia.
+- Herencia Basada en Prototipos.
+- Funciones constructoras y de clase
+    - This y new.
+
