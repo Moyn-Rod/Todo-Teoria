@@ -116,13 +116,35 @@ function Animal(raza,años){
     this.raza=raza;
     this.años=años;
 
-    return {messaje:'existe un nuevo perro'};
+    return {messaje:'existe un nuevo perro'}; // Aqui esta retornando un objeto.
 }
 ```
 
 
 - This:
-    - This hace referencia al contexto en el que lo llaman 
+    - This hace referencia al contexto en el que lo llaman.
+    - El valor del mismo depende de como y donde lo llaman.
+```js
+function(nombre){    // En este caso this esta refiriendose al contexto global.
+    return this     
+}
+
+function Persona(nombre){
+    this.nombre=nombre
+}
+
+const nuevaPersona=new Persona('Juan') // En Este caso this hace referencia a la  nueva instancia de la fn constructora.
+
+let obj{
+    name='Rodrigo',
+    apellido='Moyano',
+    completo= function(){
+        return `${this.name} ${this.apellido}`
+    }
+}
+
+obj.completo(); // Como this esta dentro del contexto del obj hace referencia a sus propiedades.
+```
 
 
 
