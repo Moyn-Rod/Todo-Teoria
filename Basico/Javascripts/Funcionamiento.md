@@ -79,7 +79,7 @@
  }
 ``` 
 
-# Funciones Constructoras y Function Clase
+# Funciones Constructoras y Function Clase.
 - Estas funciones se agregaron por marketing, es decir, para que sea mas comodo para los que vienen de codear con otros lenguajes.
 - Estas funciones se utilizan para crear objetos que seran repetitivos.
 - Las funciones constructoras o funciones de clase son como plantillas que vamos a utilizar para crear objetos.
@@ -144,6 +144,35 @@ let obj{
 }
 
 obj.completo(); // Como this esta dentro del contexto del obj hace referencia a sus propiedades.
+```
+
+***Funciones de clase***
+    - Las funciones de clase se agregaron en ES6, es  otra forma de plantear las fn constructoras.
+    - Partes:
+        - Class: Es para inicializar una clase
+        - Constructor:
+            - Se ejecuta automaticamente cuando se crea una instancia
+            - Sirve para pasar propiedades a las instancias de objetos a travez de argumentos.
+            - Si no colocamos un constructor, js automaticamente crea uno pero no pasara propiedades.
+        - Metodos:
+            - Son las funciones que se pasan a una clase. 
+
+```js
+Class Persona{
+    constructor(nombre,apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+
+    saludar(){
+        return `hola soy ${this.nombre} ${this.apellido}`;
+    }
+}
+
+const Persona1=new Persona(`Ricardo` `Arjona`);
+
+console.log(Persona1);
+console.log(Persona1.saludar());
 ```
 
 
