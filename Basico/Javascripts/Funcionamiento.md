@@ -247,6 +247,106 @@ c=10 // a seguiria siendo 9 aunque c haya cambiado mas adelante.
         - Arrays. 
 
 # Hoisting
+***Que Es***
+- Es la particularidad que posee js de tender a subir las variables hacia un nivel superior.
+
+***Como Funciona***
+- En Principio el lexical enviroment busca las variables y fn declaradas y las guarda en par key:Value.
+    - sal:undefined.
+    - saludo: fn(){}
+- Luego en la execution context asigna los valores y pasan 2 cosas.
+    - la funcion se ejecuta es decir abre un nuevo contexto y repite el proceso por ende esta si obtendra su valor.
+    - Js al ser sincronico lee linea por linea y  como se esta inicializando la variable antes de que  se le pueda asignar un valor esta devolvera undefined.
+```js
+saludo(); // Devuelve el valor
+console.log(sal); // Defuelve undefined.
+
+ function saludo(){
+    return `Hola`;
+};
+
+var sal=`salada`;
+```
+
+
+# Scoope
+- en principio el lexical busca todas las variables declaradas con var y las fn.
+- luego el execution asigna sus valores.    
+    - saludo: `Hello`
+    - fn: saludo()
+    - fn: saludo1()
+    - Hay una invocacion a fn se abre un nuevo contexto.
+        - En este nuevo contexto no existe saludo por ende el outter busca en un contexto superior (en este caso es el 
+        - Como el valor de global es `Hello`retorna este valor.
+    - Luego saludo se  le reasigna otro valor `Chau`
+    - Se encuentra otra invocacion saludo1()
+        - En este contexto saludo  se reasigna otro valor, como no existe una variable saludo dentro del contexto de esta funcion el outter sale y reasigna la que se llame asi. 
+        - Saludo queda con el valor `Hola`
+```js
+var saludo=`Hello`;
+
+function saludo(){
+    return saludo;
+};
+console.log(saludo());// La fn busca saludo en un contexto superior y retorna Hello.
+
+saludo=`chau`;
+
+console.log(saludo) // se reasigna saludo `Chau`
+
+function saludo1(){
+    saludo=`Hola`;
+    return saludo 
+}
+console.log(saludo1())//Retorna `Hola`por que existe un saludo en este contexto.
+console.log(saludo)   // saludo al existir en el contexto global se reasigno. su valor es `Hola`
+```
+
+
+# Execution Stack
+- Esto se refiere a como se va ejecutando el codigo cuando existen varias llamadas a funciones.
+- A medida que va avanzando el codigo, con varios llamadas a fn, se va generando una pila de ejecucion, en donde cuando se termine el ultimo proceso, se iran terminando los procesos hasta llegar al primero que se genero. 
+
+- Como se genera:
+    - Poseemos la fn nombre que retorna la invocacion a fn apellido. 
+    - esta funcion  apellido posee una fn en su interior y la retorna. 
+
+
+    fn nombre (){
+        - se inicializa su execucion y retorna la invocacion de appelido
+        - Se habe un nuevo contexto.
+        - fn apellido(){
+            - retorna la fn Completo se abre un nuevo contexto
+            - Fn completo(){
+                esta fn retorna el nombre completo.
+                y se cierra este contexto.
+            }
+
+            - Se termino el contexto de completo.
+            - Retorno Rodrigo moyano.
+            - Se cierra este contexto.
+        }
+        - Se termino el contexto de apellido.
+        - retorna rodrigo moyano
+        - ES EL VALOR DE RETORNO DE NOMBRE.
+        - SE TERMINA TODO EL CONTEXTO.
+    }; 
+```js
+function nombre(){
+    return apellido();
+};
+function apellido(){
+     function Completo(){
+        return `Rodrigo Moyano`;
+    }
+    return Completo()
+}
+
+
+console.log(nombre())
+```
+
+# CallBacks
 
 
 
