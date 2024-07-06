@@ -208,11 +208,25 @@ class Despedido extends Persona (){
     };
 };                          // Que no necesitemos los argumentos de nuestra superClase.
 ```
+# Statements
+- Son declaraciones que generan una accion y forman bloques de codigo 
+- controlan el flujo y definen estructuras de codigo. 
+- Tenemos :
+    - Declaramos una fn.
+    - Declaramos un flujo  de codigo (if,switch).
+    - Declaramos una variable.
+    - Declaramos una clase.
+# Expresiones
+- Pueden formar parte de las staments.
+- Producen un valor
+- tenemos:
+    - literales, producen un valor directo.
+    - Operaciones aritmeticas.
+    - llamada a funcion. 
+# Valor y referencia
+
 # Hoisting
 
-# Statements
 
-# Expresiones
 
-# Valor y referencia
 

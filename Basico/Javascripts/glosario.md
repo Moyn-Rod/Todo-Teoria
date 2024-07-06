@@ -15,3 +15,6 @@
 
 ***Metodos***
 - Ciertos comportamientos que aplicamos a las clases,  generalmente son funciones.
+
+***Atributos***
+-   Son las propiedades que les pasamos a las funciones Constructoras.
