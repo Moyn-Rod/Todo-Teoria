@@ -158,7 +158,7 @@ obj.completo(); // Como this esta dentro del contexto del obj hace referencia a 
             - Son las funciones que se pasan a una clase. 
 
 ```js
-Class Persona{
+class Persona{
     constructor(nombre,apellido){
         this.nombre=nombre;
         this.apellido=apellido;
@@ -174,9 +174,40 @@ const Persona1=new Persona(`Ricardo` `Arjona`);
 console.log(Persona1);
 console.log(Persona1.saludar());
 ```
+***Extends y Super***
+- Permite heradar a una clase las propiedades de otra clase.
+- Se utilizan Para tener un codigo mas organizado.
+- basicamente se crearia una subclase de la superclase(clase padre).
+- Extends: Es la palabra clave para que crear una clase que herede las prop de otra clase.
+- Super: Es necesario invocar este metodo en el constructor para que pueda tomar las propiedades de la superClase.
+    - Podemos apreciar 2 casos.
 
+```js
+class Persona(){
+    constructor(nombre,apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+    metodo(){
+        return `Hola,${nombre} ${apellido}`;
+    };
+}
 
+class Empleados extends Persona(){
+    constructor(nombre,apellido,activo){
+        super(nombre,apellido);
+        this.activo=activo;      // Que Utilicemos los argumentos de nuesta superClase.
+    }
+}
 
+class Despedido extends Persona (){
+
+    constructor(activo){
+        super()
+        this.activo=activo;
+    };
+};                          // Que no necesitemos los argumentos de nuestra superClase.
+```
 # Hoisting
 
 # Statements
@@ -185,5 +216,3 @@ console.log(Persona1.saludar());
 
 # Valor y referencia
 
-
-# Tipos De Errores

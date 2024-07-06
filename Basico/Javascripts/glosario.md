@@ -9,5 +9,9 @@
 
 ***Instancia***
 - Crear una instancia se refiere a una copia individual de una estructura o entidad.
+
 ***Bindear***
 - Es vincular o enlazar una variable, funcion,evento o un recurso a otro.
+
+***Metodos***
+- Ciertos comportamientos que aplicamos a las clases,  generalmente son funciones.
