@@ -223,7 +223,28 @@ class Despedido extends Persona (){
     - literales, producen un valor directo.
     - Operaciones aritmeticas.
     - llamada a funcion. 
+
 # Valor y referencia
+- Podemos asignar valores por valor o referencia.
+- Por Valor:
+    - No Toman en Cuentan los cambios que se generan, ya que js en sincronico(lee linea por linea)
+    - Esto se aplica a los valores primitivos, ya que estos se aplican generando copias de los mismos. 
+```js
+let a =5;
+let b=6
+let c=9 
+
+a=c // Aqui a toma el valor de 9
+
+c=10 // a seguiria siendo 9 aunque c haya cambiado mas adelante.
+```
+- Por Referencia:
+    - Cuando asignamos valores por referencia, Esta mirando a un espacio de memoria concreto
+    - Si se enteraria de los cambios que se generarian en ese espacio de memoria
+    - Esto se aplica en. 
+        - Funciones
+        - Objetos
+        - Arrays. 
 
 # Hoisting
 
