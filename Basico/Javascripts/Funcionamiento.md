@@ -91,6 +91,27 @@
     30. ||      (operador or)                ||   la izquierda.
     21. ?..:    (ternarios)                  ||   la izquierda.
 
+# Coercion De Datos
+
+# true, truty y false, falsy
+
+- true y false son valores booleanos que representan verdad y falsedad.
+
+- truty : Cuando algo se considera verdadero aunque no sea especificamente true. 
+    - fn.
+    - array.
+    - obj.
+    - string no vacios.
+    - Numeros distintos de 0.
+
+- falsy: Cuando algo  se considera Falso aunque no sea especificamente false.
+    - 0.
+    - string vacios.
+    - false.
+    - null.
+    - undefined .
+    - NaN.
+
 # Herencia de Objetos Basado En Prototipos
 
 - Basicamente todas las estructuras de datos de js son un objetos. 

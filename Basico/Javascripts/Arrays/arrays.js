@@ -1,11 +1,12 @@
-let arr=[1,2];
 
-let news=arr.entries();
+let arr = [1, 2];
 
-let arr2=[]
+let obj={};
+let metodo=arr.every((ele, ind) => {
+  if (ele > 0) {
+   return obj[ind]=ele // Debes retornar true para que every siga iterando
+  }
+  return false; // O retornar false si la condición no se cumple
+});
 
-for (const i of news) {   
-        arr2.push(i);       
-};
-
-
+console.log(metodo);

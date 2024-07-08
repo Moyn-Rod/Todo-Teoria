@@ -213,3 +213,49 @@ for i for news{
 
 arr2=[[0,1],[1,2]]
 ```
+- Array.every ( )
+    - Recorre y prueba si todos los elementos de un array,cumplen una determinada condicion.
+    - Devuelve booleanos true o false.
+    - Posee 2 parametros:
+        - callback:
+            - Elemento actual.
+            - Indice actual.
+            - El arreglo completo.    
+    
+        - Una fn this.
+    - Devuelve true o algo que le decimos que haga.
+    - Siempre debe retornar algo para que funcione.
+    - Buena practica guardar el retorno del metodo en una variable.
+```js
+let arr=[1,2];
+
+arr.every((ele,ind,arr)=>{
+        console.log(ele>0); // Devuelve true.
+});
+
+arr.every((ele,ind,arr)=>{
+        if(ele>0) {ind:`${arr}`} // Aqui se genera un error, si pongo una condicion explicita si o si debe retornar algo                        de lo contrario retornaria undefined. lo que seria falsy y se detendria el codigo.
+});
+
+arr.every((ele, ind) => {
+  if (ele > 0) {
+    console.log({ind: `${ind}`});
+    return true; // Debes retornar true para que every siga iterando
+  }
+  return false; // O retornar false si la condición no se cumple
+});
+
+
+let arr = [1, 2];
+
+let obj={};
+arr.every((ele, ind) => {
+  if (ele > 0) {
+   return obj[ind]=ele 
+  }
+  return false; 
+});
+
+console.log(obj)
+
+```
