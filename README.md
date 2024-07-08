@@ -23,9 +23,25 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 
 - Que es js.
 - Como esta formado.
+- Tipo De Errores.
+- Procedencia de operadores.
 - Como funciona.
-- Como Maneja los errores.
+- Tipo De Errores.
 - Herencia Basada en Prototipos.
 - Funciones constructoras y de clase
-    - This y new.
+    - This, new.
+    - Extends,super.
+- Staments.
+- Expresion
+-   Valor y Referencia.
+- Hoisting
+- Scoope
+- Execution stacks
+- Manejo De Errores.
+- Callbacks.
+
+***Tipo De Datos***
+- Datos primitivos.
+- Como utilizar type of 
+
 

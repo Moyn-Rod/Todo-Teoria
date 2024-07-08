@@ -18,3 +18,9 @@
 
 ***Atributos***
 -   Son las propiedades que les pasamos a las funciones Constructoras.
+
+***Iterable**
+- Se Ledice iterable a todo tipo de dato o estructura de datos que se puedan recorrer.
+
+***Indexable***
+- Todo elemento que contenga elementos emnumerados de manera secuencial y con numeros enteros. 

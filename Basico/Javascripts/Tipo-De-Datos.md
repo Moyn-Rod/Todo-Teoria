@@ -11,6 +11,22 @@
     - el mayor numero que se puede representar es 255 (2^8-1).
     - ahora imaginemos 4 bytes serian 4 filas de 8 casillas. y asi sucesivamente.
 
+# Como funciona la Memoria RAM en los lenguajesde programacion
+- Basicamente se divide en 2 
+- Pila:
+    - Gestiona la memoria Temporal y vida corta.
+    - Aqui se guardan referencias a Heap, invocaciones a fn y variables locales.
+    - Ejecutan las tareas rapidas.
+        - Se invoca una fn, se abre su contexto y despues se elimina.
+    - Poseen El Funcionamiento de LIFO(El primero en entrar es el ultimo en salir.)
+- Heap:
+    - Aqui se guardan los datos con mayor vida util o que pueden cambiar su tamaño.
+        - Objetos
+        - Arrays.
+        - Estructuras de datos complejas.
+    - Los datos se guardan de manera desordenada segun su tamaño. 
+
+
 
 # Tipos De Datos
 
@@ -43,7 +59,7 @@ console.log(bar);// Bar sigue con su mismo valor.
 # Number
 
 - Numeros positivos,negativos y de punto flotante.
-- js utiliza el formato IEEE754 en donde existe una presicion de 64 bit 
+- js utiliza el formato IEEE754 en donde existe una doble presicion de 64 bit 
     - lo mayor a representar con presicion seria (2^53) -1 y lo menos (-2^53) -1
     - Debido a que 52 bit se destinan a numeros enteros.
     - 11 bit a numeros de punto flotante. 
@@ -51,7 +67,7 @@ console.log(bar);// Bar sigue con su mismo valor.
 
 ***Posee 3 numeros especiales.***
 - Infinity: Infinito
-- - Infinito: infinito negativo.
+- -Infinito: infinito negativo.
 - Nan: Not a number, un error de calculo.
 
 ***formas de representar un numero.***

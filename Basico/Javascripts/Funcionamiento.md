@@ -55,6 +55,41 @@
 ***Cuando se muestra el error***
 -  Cuando es un error de sintaxis o semantico el syntax parser te avisa.
 -  Cuando es un error de programacion se muestra cuando se ejecuta el codigo.
+# Procedencia de operadores.
+- todos los lenguajes tienen su forma de aplicar aritmetica, debido a su precedencia de operadores 
+- Tabla de mayor precedencia hacia menor.
+
+    1. (...)  parentesis                        
+    2.   .   (Dot Notacion).                 ||   la izquierda.
+    3.  [..] (Break Notacion).               ||   la izquierda.
+    4.  new  (todos los argumentos)          ||   la izquierda.
+    5. (..)  (llamada a fn)                  ||   la izquirda.
+    6. ?     (encadenamiento de los if)      ||   la izquierda.
+    7. New   (todos los argumentos)          ||   la derecha.
+    8. ..++    (Incremento )              
+    9. ..--    (decremento)
+    10.  !      (negacion)                   ||   la derecha.
+    11. (+)     (suma)                       ||   la derecha.
+    12. (-)      (resta)                     ||   la derecha,
+    13. ..++    (Incremento)                 ||   la derecha.
+    14. ..--    (decremento)                 ||   la derecha.
+    15. **      (potencia)                   ||   la derecha
+    16. (*)       (multiplicacion)           ||   la izqueirda
+    17. /       (division)                   ||   la izqueirda
+    18. %      (resto)                       ||   la izqueirda
+    19. (+)       (suma)                     ||   la izqueirda
+    20. (- )      (resta)                    ||   la izquierda.
+    21. (> )       (menor)                   ||   la izquierda.
+    22. (>=)      (menor o igual)            ||   la izquierda.
+    23. <       (mayor)                      ||   la izquierda.
+    24. <=      (mayor o igual)              ||   la izquierda.
+    25. ==      (igual)                      ||   la izquierda.
+    26. !=      (desigual)                   ||   la izquierda.
+    27. ===     (igualdad estricta)          ||   la izquierda.
+    28.  !==     (desigualdad estricta)      ||   la izquierda.
+    29. &&      (operador y)                 ||   la izquierda.
+    30. ||      (operador or)                ||   la izquierda.
+    21. ?..:    (ternarios)                  ||   la izquierda.
 
 # Herencia de Objetos Basado En Prototipos
 
