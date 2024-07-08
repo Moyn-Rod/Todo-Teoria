@@ -150,7 +150,7 @@ let arr3=Array.from({ 1:`a`, 2:`b`, 3:`c`,length:3}) // [undefined,a,b]
 
 ***Metodos***
 
-
+# Para Seleccionar Un Valor.
 - Array.at( ):
     - Selecciona un elemento segun su indice.
     - Puede entrar desde el ultimo elemento usando numeros negativos.
@@ -160,38 +160,6 @@ let arr=[1,2,3];
 console.log(arr.at(0))  // En la posicion 0 se encuentra 1
 console.log(arr.at(-1)) // En la posicion -1 se encuentra el ultimo elemento 3
 
-```
-- Array.concat( ):
-    - Este metodo concatena 2 o mas arrays.
-    - Realiza una copia superficial de las referencias de los arrays que se encuentran en las pila. Y crea un nuevo array
-    - Si se modifica alguno de los arrays originales se modificara el nuevo array, por que esta referenseado a ellos. 
-    - los arrays a concatenar van separados por , . 
-```js
-let arr = [1, 2, 3];
-
-let arr2 = [4, 5];
-
-let arr3=arr.concat(arr2); 
-
-console.log(arr3);// retorna [1,2,3,4,5]
-
-let arr6=arr3.concat(arr,arr2) // se repiten infinitamente los valores creando nuevas referencias a los mismos array 
-
-console.log(arr6) //[,1,2,3,4,5,1,2,3,4,5]
-```
-- Array.copyWithin( ):
-    - Permite insertar y mutar un array.
-    - realiza una copia de una seccion a otra en el mismo array.
-    - 3 parametros.
-        - target: en donde se insertara la copia.
-        - star: desde que indice.
-        - end: hast que indice hare la copia (no incluye el end)
-```js
-let arr=[1,2,3,4,5];
-
-let new=arr.copyWithin(0,1,3) 
-
-console.log(new); //devolveria [2,3,3,4,5]
 ```
 - Array.entries( ):
     - Nos devuelve pares claves valor entre su indice y el valor, en forma de array.
@@ -213,6 +181,63 @@ for i for news{
 
 arr2=[[0,1],[1,2]]
 ```
+# Para modificar.
+- Array.concat( ):
+    - Este metodo concatena 2 o mas arrays.
+    - Realiza una copia superficial de las referencias de los arrays que se encuentran en las pila. Y crea un nuevo array
+    - Si se modifica alguno de los arrays originales se modificara el nuevo array, por que esta referenseado a ellos. 
+    - los arrays a concatenar van separados por , . 
+```js
+let arr = [1, 2, 3];
+
+let arr2 = [4, 5];
+
+let arr3=arr.concat(arr2); 
+
+console.log(arr3);// retorna [1,2,3,4,5]
+
+let arr6=arr3.concat(arr,arr2) // se repiten infinitamente los valores creando nuevas referencias a los mismos array 
+
+console.log(arr6) //[,1,2,3,4,5,1,2,3,4,5]
+```
+- Array.fill( ):
+    - Nos permite cambiar indices del arreglo segun mis parametros.
+    - Si el primer parametro es obj, rellena los demas lugares con referencias a este obj, es decir que si realizo cambios en este se veran reflejados en los otros.
+    - Acepta valores negativos.
+    - Parametros:
+        - target: el valor con cual mutaremos.
+        - start: desde que indice iniciamos. ||0
+        - end : Hasta  que indice no incluido || array.length.
+```js
+let arr2=[1,2,3,4,5];
+
+console.log(arr2.fill(7,3,5)) //[1,2,3,7,7] desde el indice 3 hasta el indice 5 que no existe.
+
+let arr =Array(3).fill(4);
+console.log(arr);           // Retorna [4,4,4]
+
+let arr7=[].fill.call({0:`aa`, 1:`bb`, 2:`cc`, length:3},4)
+
+console.log(arr7);      // {0:4, 1:4, 2:4, length: 3}
+```
+
+- Array.copyWithin( ):
+    - Permite insertar y mutar un array.
+    - realiza una copia de una seccion a otra en el mismo array.
+    - 3 parametros.
+        - target: en donde se insertara la copia.
+        - star: desde que indice.
+        - end: hast que indice hare la copia (no incluye el end)
+```js
+let arr=[1,2,3,4,5];
+
+let new=arr.copyWithin(0,1,3) 
+
+console.log(new); //devolveria [2,3,3,4,5]
+```
+
+
+# Para Recorrer
 - Array.every ( )
     - Recorre y prueba si todos los elementos de un array,cumplen una determinada condicion.
     - Devuelve booleanos true o false.
@@ -256,6 +281,19 @@ arr.every((ele, ind) => {
   return false; 
 });
 
-console.log(obj)
+console.log(obj) //{0:1, 1:2}
 
+let obj={
+    0:`a`,
+    1:`bb`,
+    2:`cc`,
+    length:3
+ };
+
+let result=[].every.call(obj,(ind)=>typeof`string`);
+
+console.log(result);
 ```
+
+- Array.filter ( )
+    -
