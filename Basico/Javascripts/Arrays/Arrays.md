@@ -101,6 +101,9 @@ console.log(array[5](`Rodrigo`)) // Accedemos e invocamos la fn que se encuentra
     - Posee 3 parametros:
         - El tipo de dato a convertir a array.
         - una fn map para aplicar cambios al elemento.
+            - 2 elementos.
+                - cada elemento del array.
+                - indices.
         - Una fn this para apuntar a un contexto especifico.
 
 ```js
@@ -115,3 +118,18 @@ let arr3=Array.from({lenght:4, 0:`a`, 1:`b`, 2:`c`}) // [undefined,a,b,c]
 let arr3=Array.from({ 0:`a`, 1:`b`, 2:`c`,length:3}) // [a,b,c]
 let arr3=Array.from({ 1:`a`, 2:`b`, 3:`c`,length:3}) // [undefined,a,b]
 ```
+- Array.fromAsync()
+    - Funciona igual a Array.from(), pero trabaja con: 
+        -   iterables asincronos ( es decir promesas o un array de promesas)
+        -   iterables.
+        -  obj con lenght y indexacion.
+    - posee los mismos parametros que Array.from
+    - retorna una promesa que se debe resolver y al final devuelve un array.
+    - Se espera cada elemento que genere la matriz.
+    - Espera los elementos secuencialmente, es decir va uno por uno.
+    - promise all
+        - No espera que un elemento termine.
+        - espera todos los valores simultaneamente.
+
+
+-
