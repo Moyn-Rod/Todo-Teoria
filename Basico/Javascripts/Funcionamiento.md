@@ -345,8 +345,103 @@ function apellido(){
 
 console.log(nombre())
 ```
+# Manejo de Errores.
+- Nosotros debemos manejar de alguna manera las excepciones.
+- Una excepcion es cuando se genera algo inesperado o algo que interrumpe el  flujo normal del codigo.
+- Si es un error nativo de js el bloque catch lo tomaria automaticamente.
+- Para errores personalizados utilizamos throw.
+    - Throw 
+        - Es como un return que corta toda ejecucion.
+        - Throw es una statement que nos permite atrapar un error en el flujo, Sin importar  en que contexto.
+        - Throw siempre busca un catch ya sea subiendo o bajando los contextos, si no lo encuentra muesta el error en consola.
+
+        - Puede lanzar cualquier tipo de valor (texto, null, undefined), 
+            - Buenas Practicas:
+                - Lance un objeto hecho manualmente
+                - Que trabaje en conjunto con Error o instancias de error x que nos proporcionan mas datos.
+                - Error es un objeto que posee varias propiedades y metodos:
+                    - error.name : Nombre del error.
+                    - Error.message: es el mensaje que mandamos.
+                    - Error.stack: es la informacion  que nos va mostrando donde paso el error.
+- 2 Formas de hacerlo.
+    -Try Catch
+        - try:
+            - Aqui va la parte del codigo que se ejecutara.
+            - Si se encuentra una error, se corta la ejecucion y salta al catch.
+        - Catch:
+            - Si se genera algun error o un valor no esperado, catch tomara este error.
+            - Se ejecutara lo que este dentro de este bloque de codigo
+            - El tipo de dato que recibe, dependera del tipo de dato que utilice para ejecutar la excepcion.
+- Ejemplo:
+    - Declarar la fn fuera del bloque:
+        - Al declarar la fn fuera del bloque esta perteneceria al contexto global lo que permitira:
+            - Reutilizarla.
+            - Mantener un condigo limpio.
+            - UTILIZAR  ESTA SIEMPRE.
+    - Declarar la fn fuera:
+        - Solo pertenecera al contexto de try catch
+```js
+function edad(){
+    if (a>0){
+        throw new Error(`Aqui Sucedio un error`)  // Declaro la fn fuera del try catch y la ejecuto dentro del try.
+    }
+}
+
+try{
+    edad()
+
+}catch(error){
+     console.log(error.message)
+}finally{
+    //Esto se ejecuta haya error o no. 
+}
+
+
+try{
+    function edad(){
+    if (a>0){
+        throw new Error(`Aqui Sucedio un error`)  // Declaro la fn dentro del try y la ejecuto en el mismo contexto.
+    }
+}
+    edad()
+}catch(error){
+     console.log(error.message)
+};
+```
+*** Manejar con Cb errores***
+        
+- Existe otra forma de manejar errores,A travez de una callbacks.
+- Esta forma es antigua se utilizaba para manejar al asincronismo.
+```js
+function Nombre(nombre,apellido,cb){
+    if(typeof nombre!==`string`){
+        let error=new Error(`Nombre Invalido`);
+       return cb(error,null);
+    }else{
+        result={
+            nombre:nombre,
+            apellido:apellido
+        };
+       return cb(null,result);
+    }
+};  
+
+function cb(error,result){
+    if(error) console.log(`Se Produjo un error, ${error.message}`);
+    if(result) console.log(result)
+}
+```
 
 # CallBacks
+- Las callbacks son funciones que pasan como argumentos otras fn.
+- Estas fn se ejecutan despues de que se genere alguna accion.
+- Generalmente se utiliza para realizar codigo de forma asincrona.
+    - Leer Archivos.
+    - Solicitudes HTTP
+    - Eventos.
+
+
+
 
 
 

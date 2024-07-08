@@ -1,4 +1,2 @@
-const array=[undefined]
 
-
-console.log(typeof array)
+Nombre(1,`moyano`,cb)
