@@ -1,6 +1,11 @@
-let arr=[1,2,3];
+let arr=[1,2];
 
-console.log(arr.at(0))
-console.log(arr.at(-1))
+let news=arr.entries();
+
+let arr2=[]
+
+for (const i of news) {   
+        arr2.push(i);       
+};
 
 

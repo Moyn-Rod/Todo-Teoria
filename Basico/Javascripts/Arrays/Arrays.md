@@ -150,10 +150,10 @@ let arr3=Array.from({ 1:`a`, 2:`b`, 3:`c`,length:3}) // [undefined,a,b]
 
 ***Metodos***
 
-- Para seleccionar indices:
-    - Array.at():
-        - Selecciona un elemento segun su indice.
-        - Puede entrar desde el ultimo elemento usando numeros negativos.
+
+- Array.at( ):
+    - Selecciona un elemento segun su indice.
+    - Puede entrar desde el ultimo elemento usando numeros negativos.
 ```js
 let arr=[1,2,3];
 
@@ -161,4 +161,55 @@ console.log(arr.at(0))  // En la posicion 0 se encuentra 1
 console.log(arr.at(-1)) // En la posicion -1 se encuentra el ultimo elemento 3
 
 ```
-    -Array.
+- Array.concat( ):
+    - Este metodo concatena 2 o mas arrays.
+    - Realiza una copia superficial de las referencias de los arrays que se encuentran en las pila. Y crea un nuevo array
+    - Si se modifica alguno de los arrays originales se modificara el nuevo array, por que esta referenseado a ellos. 
+    - los arrays a concatenar van separados por , . 
+```js
+let arr = [1, 2, 3];
+
+let arr2 = [4, 5];
+
+let arr3=arr.concat(arr2); 
+
+console.log(arr3);// retorna [1,2,3,4,5]
+
+let arr6=arr3.concat(arr,arr2) // se repiten infinitamente los valores creando nuevas referencias a los mismos array 
+
+console.log(arr6) //[,1,2,3,4,5,1,2,3,4,5]
+```
+- Array.copyWithin( ):
+    - Permite insertar y mutar un array.
+    - realiza una copia de una seccion a otra en el mismo array.
+    - 3 parametros.
+        - target: en donde se insertara la copia.
+        - star: desde que indice.
+        - end: hast que indice hare la copia (no incluye el end)
+```js
+let arr=[1,2,3,4,5];
+
+let new=arr.copyWithin(0,1,3) 
+
+console.log(new); //devolveria [2,3,3,4,5]
+```
+- Array.entries( ):
+    - Nos devuelve pares claves valor entre su indice y el valor, en forma de array.
+    - Para avanzar en estos pares  se debe utilizar next().value.
+    - {value:[indice:valor]} este es el objeto en si
+    - Es conveniente iterarlos para obtener todos.   
+```js
+let arr=[1,2,3];
+
+let news=arr.entries();
+
+news.next().value // devolveria [0,1]
+new.next().value // devolveria [1,2];
+
+let arr2=[];
+for i for news{
+    arr2.push(i);
+}
+
+arr2=[[0,1],[1,2]]
+```
