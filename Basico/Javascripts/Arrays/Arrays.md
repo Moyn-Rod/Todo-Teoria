@@ -91,6 +91,7 @@ console.log(array[5](`Rodrigo`)) // Accedemos e invocamos la fn que se encuentra
 ***Propiedades***
 
 -  Array.from():
+
     - Transforma en un array a 
         - Todo lo que se pueda iterar, es decir recorrer.
         - Para obj se tiene que cumplir las 2 condiciones. 
@@ -118,7 +119,8 @@ let arr3=Array.from({lenght:4, 0:`a`, 1:`b`, 2:`c`}) // [undefined,a,b,c]
 let arr3=Array.from({ 0:`a`, 1:`b`, 2:`c`,length:3}) // [a,b,c]
 let arr3=Array.from({ 1:`a`, 2:`b`, 3:`c`,length:3}) // [undefined,a,b]
 ```
-- Array.fromAsync()
+- Array.fromAsync():
+
     - Funciona igual a Array.from(), pero trabaja con: 
         -   iterables asincronos ( es decir promesas o un array de promesas)
         -   iterables.
@@ -132,4 +134,31 @@ let arr3=Array.from({ 1:`a`, 2:`b`, 3:`c`,length:3}) // [undefined,a,b]
         - espera todos los valores simultaneamente.
 
 
--
+- Array.isArray():
+    - Devuelve si el objeto es un array.
+    - true si es.
+    - false si no.
+
+- Array.of()
+    - Crea array a partir de numeros.
+    - Puedo pasar un unico numero o varios
+
+```js
+   let arr= Array.of(1) // devuelve [1]
+   let arr2=Array.of(1,3,4,5) //devuelve [1,3,4,5] 	
+```
+
+***Metodos***
+
+- Para seleccionar indices:
+    - Array.at():
+        - Selecciona un elemento segun su indice.
+        - Puede entrar desde el ultimo elemento usando numeros negativos.
+```js
+let arr=[1,2,3];
+
+console.log(arr.at(0))  // En la posicion 0 se encuentra 1
+console.log(arr.at(-1)) // En la posicion -1 se encuentra el ultimo elemento 3
+
+```
+    -Array.
