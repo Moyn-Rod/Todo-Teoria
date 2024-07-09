@@ -36,7 +36,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
     - Extends,super.
 - Staments.
 - Expresion
--   Valor y Referencia.
+- Valor y Referencia.
 - Hoisting
 - Scoope
 - Execution stacks

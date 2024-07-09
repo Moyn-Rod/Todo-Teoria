@@ -235,7 +235,30 @@ let new=arr.copyWithin(0,1,3)
 
 console.log(new); //devolveria [2,3,3,4,5]
 ```
+- Array.flat( )
+    - Te permite aplanar los sub-array  que se encuentran dentro de un array.
+    - Podemos definir a que nivel se aplicara por defecto es 1.
+```js
+let array=[1,2,3,[4,5]] 
 
+let newArr=array.flat(1)
+
+console.log (newArr) // retorna [1,2,3,4,5]
+
+let arr=[1,2,3,[4,5,[6,7,8]]];
+
+let newArr2=arr.flat(2)
+
+console.log(newArr2); // retorna [1,2,3,4,5,6,7,8]
+```
+- Array.flatMap( )
+    - Es una convinacion de flap y map.
+    - parametros
+        - cb:
+            - value: valor actual de elemento.
+            - index: indice actual del elemento.
+            - arr:  el array completo. 
+        - thisArg: Apunta al contexto de un determinado tipo de dato.
 
 # Condicionales
 - Array.every ( )
@@ -389,6 +412,41 @@ console.log(busca);   // Aqui estoy desestructurando el obj.y busca el que es ti
 - Array.findLastIndex ( )
     - Recorre el array y devuelve el indice del primer elemento que cumpla con la condición.
     - Itera desde el final del array. 
-    - Actua de manera igual que findIndex ( ) pero en orden inverso. 
+    - Actua de manera igual que findIndex ( ) pero en orden inverso.
 
-- 
+- Array.forEach ( )
+    - Recorre el array y le aplica una modificación segun la fn que le pasemos .
+    - Una vez iniciado el forEach aunque modifiquemos el array original no tomara ese valor.
+    - Para pararlo se debe agregar una excepción.
+    - Los  ele vacios o undefined o null los salta.
+    - Parametros:
+        - cb:
+            - value: elemento actual.
+            - index: indice actual.
+            - arr: Array completo.
+        -thisArg: Puntero que apunta a algun contexto.
+```js
+let arr=[1,2,3];
+
+arr.forEach((ele,ind)=>arr[ind]=ele*2) // Como solo recorre el array de esta manera podria modificarlo.
+                                        // Retorna [2,4,6]
+
+function Lista(){                       // Creo una fn constructora.
+    this.count=0;
+    this.total=0;
+};
+
+Lista.prototype.add=function(arr){ // agrego una funcion que recorre los ele del array aumenta el contador y suma  ele
+    arr.forEach(function(ele){
+        ++this.count
+        this.total+=ele      
+    },this);
+}
+                          // Debido a que estoy utilizando el thisArg y  este esta  dentro del contexto  de la instancia de Lista referencia a los this de la lista.
+
+const ver =new Lista();
+ver.add(arr)
+
+console.log(ver)
+```
+
