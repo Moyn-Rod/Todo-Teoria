@@ -181,6 +181,25 @@ for i for news{
 
 arr2=[[0,1],[1,2]]
 ```
+
+- Array.includes() :
+    - Busca un valor en el array
+    - Retorna true o false.
+    - parametros:
+        - value: valor a buscar.
+        - from index: 
+            - desde que indice buscar.
+            - Si ponemos valores negativos empieza en reversa.
+
+```js
+let arr=[1,2,3];
+
+console.log(arr.includes(1)) //retorna true.
+console.log(arr.includes(4)) //retorna false.
+console.log(arr.includes(1,1)) // retorna false por que estoy buscando desde el primer indice(2)-
+console.log(arr.includes(3,-1)) // Retorna true por que busca desde arr.length(el ultimo indice )
+```
+
 # Para modificar.
 - Array.concat( ):
     - Este metodo concatena 2 o mas arrays.
