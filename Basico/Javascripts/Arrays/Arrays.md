@@ -468,4 +468,10 @@ ver.add(arr)
 
 console.log(ver)
 ```
+- Array.indexOf( ):
+    - Retorna el indice de un elemento que buscamos.
+    - si no lo encuentra retorna -1.
+    - Paramentros:
+        - elemento que buscamos.
+        - Desde que indice buscar.
 
