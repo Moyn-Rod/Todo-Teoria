@@ -474,4 +474,46 @@ console.log(ver)
     - Paramentros:
         - elemento que buscamos.
         - Desde que indice buscar.
+```js
+let arr=[1,2,3]
+console.log(arr.indexOf(2)) //retorna el indice 1
+console.log(arr.indexOf(5)) // retornaria -1
+console.log(arr.indexOf(3,2)) // busca desde el indice 2 el valor 3
+```
+- Array.lastIndexOf():
+    - Busca  el indice del elemento.
+    - Realiza lo mismo que indexOf Y Actua de la misma manera solo que ingresa por el final.
+
+- Array.join( ):
+    - Junta todos los elementos de una matriz y los retorna en una cadena.
+    - Parametro:
+        - Unicamente un separador puede ser , - _  (debe ser un string).
+
+```js
+
+let arr=[1,2,3];
+console.log(arr.join(`-`)) //Retornaria `1-2-3` en una cadena.
+```
+
+
+- Array.Keys( )
+    - Devuelve un obj con las claves.
+    - Si hay una ranura vacia de todas maneras lo toma como un indice.
+
+```js
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+
+let obj={
+    length:3
+}
+
+for (const i of arr.keys()) {
+    console.log(i) // Si retorna.
+}
+
+for (const i of Array.prototype.keys.call(obj)) {
+    console.log(i)  // 1,2,3,4,5,6,7,8,9
+}
+```
+
 
