@@ -112,6 +112,8 @@
     - undefined .
     - NaN.
 
+# Desestructurar.
+
 # Herencia de Objetos Basado En Prototipos
 
 - Basicamente todas las estructuras de datos de js son un objetos. 

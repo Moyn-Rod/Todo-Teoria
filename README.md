@@ -27,6 +27,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Procedencia de operadores.
 - Coercion De Datos.
 - true, truty y false, falsy
+- Desestructurar.
 - Como funciona.
 - Tipo De Errores.
 - Herencia Basada en Prototipos.

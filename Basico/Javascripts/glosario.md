@@ -22,5 +22,8 @@
 ***Iterable**
 - Se Ledice iterable a todo tipo de dato o estructura de datos que se puedan recorrer.
 
+***iterar**
+- recorrer o repetir un proceso hasta que se cumpla una condicion.
+
 ***Indexable***
 - Todo elemento que contenga elementos emnumerados de manera secuencial y con numeros enteros. 

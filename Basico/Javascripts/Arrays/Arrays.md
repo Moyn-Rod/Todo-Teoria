@@ -237,7 +237,7 @@ console.log(new); //devolveria [2,3,3,4,5]
 ```
 
 
-# Para Recorrer
+# Condicionales
 - Array.every ( )
     - Recorre y prueba si todos los elementos de un array,cumplen una determinada condicion.
     - Devuelve booleanos true o false.
@@ -296,4 +296,99 @@ console.log(result);
 ```
 
 - Array.filter ( )
-    -
+    -  Crea un nuevo array con los elementos que cumplen una determinada condición.
+    - Si ningun ele cumple la condición devolvera un array vacio.
+    - Siempre debe retornar algo.
+    - Una vez que filter haya recorrido el array original, aunque este se modifique las nuevas instancias de arrays no.
+    - parametros:
+        -Callbacks:
+            - elemento actual.
+            - indice actual.
+            - array completo.
+        - this:
+            - Te permite apuntar al contexto de un determinado tipo de dato.
+            - Al utilizarlo se debe usar fuction regulares o expresadas, debido a que las arrow no tienen su propio contexto. 
+```js
+
+ let arr=[15,2,4,5,10,12,30];
+
+ let arr2=arr.filter((ele,ind,arr)=>{
+        return ele>=10;
+ });
+
+ console.log(arr2); // retorna [15,10,12,30]
+
+
+ let arr3=arr.filter((ele,ind,arr)=>ind===0)
+
+ console.log(arr3); // retorna [15]
+
+ let arr4=arr.filter((_,__,arr)=>{
+
+    return arr
+ })
+
+ console.log(arr4) // retorna [15,2,4,5,10,12,30]
+
+ let obj = {
+    minValue: 10
+};
+
+let arr = [5, 10, 20, 35, 2];
+
+let arr2 = arr.filter(function f (ele) {
+    
+    return ele <= this.minValue;
+}, obj);
+
+console.log(arr2);
+```
+- Array.find( )
+    - Devuelve el primer elemento que cumpla con la condición.
+    - Cuando lo encuentra corta la ejecución.
+    - si no lo encuentra devuelve undefined.
+    - Si modifico un elemento antes de que find pase por el mismo lo toma. 
+    - Parametros:
+        - Cb:
+            - Ele: elemento actual.
+            - ind: Indice actual
+            - arr: Array completo.
+        - Thisarg: apunta a un contexto. 
+
+```js 
+let arr2=[
+    {nombre:`a`},
+    {nombre:`b`},
+    {nombre:`c`},
+    {nombre:`d`},
+];
+
+
+let busca=arr2.find(({nombre})=>{
+    console.log(nombre)
+    return typeof(nombre)===`string`;
+});
+
+console.log(busca);   // Aqui estoy desestructurando el obj.y busca el que es tipo string.
+```
+- Array.findLast ()
+    - Lo mismo que find pero itera de manera inversa(desde el final del array).
+    - Retorna undefined si no lo encuentra.
+
+- Arrar.findIndex( )
+    - Itera sobre los elementos y devuelve el indice del elemento que cumpla con la condición.
+    - Si no lo encuentra retorna -1.
+    - Parametros:
+        - cb: 
+            - value:elemento actual.
+            - index: Indice del elemento actual.
+            - arr: Array completo.
+        -thisArg: Puntero de this.
+
+
+- Array.findLastIndex ( )
+    - Recorre el array y devuelve el indice del primer elemento que cumpla con la condición.
+    - Itera desde el final del array. 
+    - Actua de manera igual que findIndex ( ) pero en orden inverso. 
+
+- 
