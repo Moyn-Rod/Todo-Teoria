@@ -592,3 +592,28 @@ let acc=array.reduce((acc,nombre)=>{
 
 console.log(acc)
 ```
+- Array.reduceRigth( )
+    - Realiza lo mismo que el reduce y funciona igual 
+    - Entra por el final.
+
+- Array.reverse ( ):
+    - Invierte el orden del array el ultimo es  el primero y viceversa.
+    - Cambia la matriz original. 
+
+- Array.shift( )
+    - Elimina el primer elemento del array. 
+- Array.slice( )
+    - Devuelve una copia del array indicando desde que indice a que indice realizarla.
+    - Si muta el array original muta la copia.
+    - Parametros
+        - Inicio
+        - fin: no incluye el valor. 
+- Array.some( )
+    - Devuelve true o false en base a si un elemento cumple la condición.
+    - Si agrego elementos despues de que utilice some no los reconoce. 
+    - Parametros
+        - cb:
+            - value:valor actual.
+            - index: indice actual.
+            - arr:   array completo.
+        - thisArg: Puntero que apunta hacia un contexto. 
