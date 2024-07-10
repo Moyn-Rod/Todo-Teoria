@@ -1,12 +1,23 @@
 
 
-let arr=[`a`,3,4,`b`,[1,2],{name:`parce`}];
-arr.push(3)
+const items = [
+    { name: "Edward", value: 21 },
+    { name: "Sharpe", value: 37 },
+    { name: "And", value: 45 },
+    { name: "The", value: -12 },
+    { name: "Magnetic", value: 13 },
+    { name: "Zeros", value: 37 },
+  ];
+let arr3=items.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
 
-console.log
+    if (a.name < b.name) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
 
-let arr2=[1,`a`,3,4,`b`];
-
-let newarr=arr.slice(_,6)
-
-console.log(newarr)
+console.log(arr3) 

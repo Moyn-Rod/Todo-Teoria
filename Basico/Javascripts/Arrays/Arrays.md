@@ -617,3 +617,43 @@ console.log(acc)
             - index: indice actual.
             - arr:   array completo.
         - thisArg: Puntero que apunta hacia un contexto. 
+
+- Array.sort( )
+    - Ordena el array segun Unicode.
+    - Si utilizamos los parametros lo ordena segun ellos.
+    -  posee 2 parametros a,b.
+        - Si a>b retorna 1 que significa que b ira primero.
+        - Si a< b retorna -1 que significa que a ira primero .
+        - si son iguales no cambiaran su lugar (retorna 0).
+```js
+let arr =[3,2,7,9,5,4];
+
+let ordenado=arr.sort((a,b)=>{
+    return a-b  // ascendente
+})
+let ordenado2=arr.sort((a,b)=>{
+    return b-a  //descendente
+})
+
+const items = [
+    { name: "Edward", value: 21 },
+    { name: "Sharpe", value: 37 },
+    { name: "And", value: 45 },
+    { name: "The", value: -12 },
+    { name: "Magnetic", value: 13 },
+    { name: "Zeros", value: 37 },
+  ];
+let arr3=items.sort(function (a, b) {
+    if (a.name > b.name) {      // Si a es alfabeticamente mayor que b  retorna 1 es decir A ira despues que b 
+      return 1;
+    }
+
+    if (a.name < b.name) {      // si a es menor a b, a debe ir primero.
+        return -1;
+      }
+
+      return 0;                 // Si a y b son iguales no cambiaran sus lugares.
+    });
+
+console.log(arr3) 
+```
