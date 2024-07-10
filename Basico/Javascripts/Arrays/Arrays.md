@@ -515,6 +515,9 @@ for (const i of Array.prototype.keys.call(obj)) {
     console.log(i)  // 1,2,3,4,5,6,7,8,9
 }
 ```
+- Array.Values( )
+    - Devuelve un obj Iterador de los valores del array. 
+
 - Array.map( )
     - Crea un nuevo array con los resultados de la llamada a fn.
     - Solo se aplica a los elementos asignados.
@@ -605,6 +608,9 @@ console.log(acc)
 
 - Array.shift( )
     - Elimina el primer elemento del array. 
+
+- Artay.unShift()
+    - Agrega 1 o mas elementos al array.
 - Array.slice( )
     - Devuelve una copia del array indicando desde que indice a que indice realizarla.
     - Si muta el array original muta la copia.
@@ -660,6 +666,10 @@ let arr3=items.sort(function (a, b) {
 
 console.log(arr3) 
 ```
+
+- Array.toSorted( )
+    - Realiza lo mismo que sort pero crea una copia del array original.
+
 - Array.splice()
     - Cambia el contenido de un array eliminando y/o agregando nuevos.
     - Parametros
@@ -678,3 +688,13 @@ let newArr=arr.splice(0,2,`a`,8)
 console.log(arr) //retorna [`a`,8,3,4,5,6]
                  // Desde le indice 0 eliminar hasta el indice 2 y agregar 2 elementos al array.
 ```
+- Array.toSpliced( )
+    - Realiza lo mismo que splice pero realiza una copa del array
+
+- Array.toString( )
+    - Convierte el array en una cadena de texto.
+- Array.with( )
+    - Cambia el valor de un elemento segun su indice
+    - Parametros:
+        - indice: donde va a cambiar.
+        - por que valor va a cambiar.
