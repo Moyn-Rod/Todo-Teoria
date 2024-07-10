@@ -600,6 +600,9 @@ console.log(acc)
     - Invierte el orden del array el ultimo es  el primero y viceversa.
     - Cambia la matriz original. 
 
+- Array.toReversed()
+    - Realiza lo smimo que reverse pero este crea una copia del original.
+
 - Array.shift( )
     - Elimina el primer elemento del array. 
 - Array.slice( )
@@ -656,4 +659,22 @@ let arr3=items.sort(function (a, b) {
     });
 
 console.log(arr3) 
+```
+- Array.splice()
+    - Cambia el contenido de un array eliminando y/o agregando nuevos.
+    - Parametros
+        - start
+            - Si es mayor al largo del array o si es negativo comienza desde atras.
+        - Delete
+            - El numero de elementos a eliminar.
+        - Elementos a agregar.
+             - Si no se especifican solamente eliminara elementos. 
+
+```js
+let arr=[1,2,3,4,5,6];
+
+let newArr=arr.splice(0,2,`a`,8)
+
+console.log(arr) //retorna [`a`,8,3,4,5,6]
+                 // Desde le indice 0 eliminar hasta el indice 2 y agregar 2 elementos al array.
 ```
