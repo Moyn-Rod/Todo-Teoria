@@ -25,9 +25,9 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Como esta formado.
 - Tipo De Errores.
 - Procedencia de operadores.
-- Coercion De Datos.
+- Coercion De Datos. FALTA
 - true, truty y false, falsy
-- Desestructurar.
+- Desestructurar.  FALTA
 - Como funciona.
 - Tipo De Errores.
 - Herencia Basada en Prototipos.
@@ -42,6 +42,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Execution stacks
 - Manejo De Errores.
 - Callbacks.
+- Parametros Reset y Spreed. FALTA
 
 ***Tipo De Datos***
 - Datos primitivos.

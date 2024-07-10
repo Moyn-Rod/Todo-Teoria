@@ -515,5 +515,80 @@ for (const i of Array.prototype.keys.call(obj)) {
     console.log(i)  // 1,2,3,4,5,6,7,8,9
 }
 ```
+- Array.map( )
+    - Crea un nuevo array con los resultados de la llamada a fn.
+    - Solo se aplica a los elementos asignados.
+    - los elementos que se agreguen despues de inicializar map no lo toma.
+    - Parametros:
+        - cb:
+            - value: elemento actual.
+            - index: indice actual.
+            - arr:   array completo.
+    - thisArg: Puntero que apunta a un contexto.
+
+```js
+
+let arr=[1,2,3,4,5]
+
+let obj={
+    length:3
+};
+
+let newarr=arr.map(ele=>{
+    return ele*2;
+});
+
+console.log(newarr) //Retorna [2,4,6,8,10]
+```
+
+- Array.pop( )
+    - Elimina el ultimo elemento de un array.
+    - Si lo guardamos en una variable no lo perdemos.
+```js
+let ar=[1,2,3,4];
+    console.log(ar.pop()) // Quita el ultimo elemento 4
+    console.log(ar)    // retorna [1,2,3]
+```
 
 
+- Array.push ( )
+    - Agrega uno o mas elementos a un array
+    - los valores son separados por , 
+```js
+let arr = [1,2,4,5];
+    arr.push(65,30)
+
+    console.log(arr)
+```
+
+- Array.Reduce ( )
+    - Acumula los elemento de un array en un unico valor.
+    - Parametros:
+        - acc: acumulador.
+        - ele: Valor actual.
+        - index: indice actual.
+        - arr:   array completo
+        - Valor Inicial 
+            - Se debe setear en 0 para que comience desde el primer elemento de lo contrario empieza en 1 
+        - Debe retornar algo.
+```js
+let arr=[1,4,5];
+
+let nuevo=arr.reduce((acc,ele,index,arr)=>{
+    console.log({acc:acc, ele:ele, index:index, arr:arr});
+
+    return acc +ele;
+});
+
+console.log(nuevo) // 
+
+let array=[`Maria`,`jose`,`Maria`, `reimondo`]
+
+let acc=array.reduce((acc,nombre)=>{
+    acc[nombre]=(acc[nombre]||0)+1    // En este bloque de codigo, en principio es un obj vacio.
+    return acc                        // Luego voy creando propiedades en funcion de
+                                     // si ya existe va a seguir teniendo el mismo nombre y se le va a sumar 1 
+},{})                                // si no existe esa propiedades va  a ser igual a 0 
+
+console.log(acc)
+```
