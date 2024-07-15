@@ -511,7 +511,89 @@ console.log(multi(1,2,3))
 ```
 ***Destructuring***
 
-- El destructuring nos permite extraer valores de arreglo y objetos
+- El destructuring nos permite extraer valores de arreglo y objetos.
+- Nos permite trabajar facilmente con estructuras de datos complejos.
+
+***Arrays*** 
+
+- Podemos asignar un elemento o propiedad a una variable.
+- Podemos Saltar elementos en el destructuring para tomar el valor deseado.
+- Podemos asignarle valores por defecto.
+```js
+let arr=[1,2,3]
+
+let [a,b,c]=arr;
+
+console.log(a); // retorna 1
+console.log(b); // retorna 2
+console.log(c); // retorna 3
+--------------------------------
+let arr=[1,2,3]
+
+let [a,,c]=arr;
+console.log(a) //Retorna 1
+console.log(c) //Retorna 3
+-------------------------------
+let arr=[1];
+
+let [a,b=2,c=3]=arr;
+
+console.log(a); //retorna 1
+console.log(b); //retorna 2 que es un valor por defecto.
+console.log(c); //retorna 3 que es un valor por defecto.
+   
+```
+**funciones**
+- Se puede desestructurar el valor de retorno, argumentos y dentro de la fn.
+```js
+function pruebaArr(){
+    return [1,2,3];
+};
+
+let [a,b,c]=pruebaArr()
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+function pruebaObj(){
+    return {aa:1,bb:2,cc:3};
+};
+
+let {aa,bb,cc}=pruebaObj();
+
+console.log(aa); //retorna 1
+console.log(bb); //retorna 2
+console.log(cc); //retorna 3
+```
+***En Objetos*** 
+- Para realizarla en obj la variable y el nombre de la propiedad deben tener el mismo nombre.
+- Podemos  asignarle alias a cada propiedad para acceder a sus valores. 
+    - Si utilizo alias no puedo volver a utilizar los nombres de las propiedades a no ser que utilice otra destructuracion distinta, con los nombres de las propiedades. 
+- Tambien podemos utilizar destructuracion por defecto. 
+
+
+```js
+let obj={
+    name:`a`,
+    apellido:`b`
+}
+
+let des={name,apellido}=obj;
+console.log(name); //retorna name.
+console.log(apellido) //retorna apellido.
+--------------
+
+let obj={
+    name:`A`,
+    apellido:`b`
+};
+
+let {name:nombre,apellido:lastname}=obj;
+
+console.log(nombre) //retorna A
+console.log(lastname);//retorna b
+```
 
 # Herencia de Objetos Basado En Prototipos
 
