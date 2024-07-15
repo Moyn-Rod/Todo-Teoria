@@ -306,6 +306,7 @@ function cb(error,result){
 - tiene un return explicito. 
 - Tbm podemos realizar ternarios anidados. 
 
+
 ```js
 let x=1,
 
@@ -314,7 +315,23 @@ console.log(x>1? `hola`:`chau`); // retorna chau  por que no cumple  la condicio
 let x=`1`;,
 console.log(x>1? `hola`:x===1?`Es uno`:`No es nada` ); // Esto es un ternario anidado.
 ```
-13.
+13. Operador de coma.
+- Te permite realizar o retornar multiples operaciones de izquierda a derecha.
+
+14. Nullish  ??
+- Te permite devolver otro valor en caso de que el primer operando es null o undefined.
+- Retonar cualquier tipo o estructura de datos.
+    - obj.
+    - str.
+    - number
+    - array.
+    - funciones.
+- Si se quiere utilizar logica completa debemos utilizar otro bucle. 
+```js
+let result= null??[1,2,3,]
+
+console.log(result);  //En este caso retornaria el operando de la derecha por que el otro es null.
+```
 
 
 # Procedencia de operadores.
