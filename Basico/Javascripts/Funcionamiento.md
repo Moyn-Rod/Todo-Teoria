@@ -326,12 +326,25 @@ console.log(x>1? `hola`:x===1?`Es uno`:`No es nada` ); // Esto es un ternario an
     - number
     - array.
     - funciones.
-- Si se quiere utilizar logica completa debemos utilizar otro bucle. 
+- Si se quiere utilizar logica completa debemos utilizar otro bucle o una fn que envuelta esta logica.
+- Si utilizamos una fn debe ser una autoinvocada. 
 ```js
 let result= null??[1,2,3,]
 
 console.log(result);  //En este caso retornaria el operando de la derecha por que el otro es null.
+------------------------
+let valor=null
+
+let result=valor??function (){
+    return (`es null hacemos otra cosa `)
+}();
+
+
+console.log(result);
 ```
+15. Encadenamiento Opcional ?.
+-  Te permite acceder a array,obj, metodos sin que se genere un error en caso de que alguna prop sea null o undefined.
+- Retona undefined.
 
 
 # Procedencia de operadores.
