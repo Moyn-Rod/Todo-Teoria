@@ -384,6 +384,44 @@ console.log(result);
     21. ?..:    (ternarios)                  ||   la izquierda.
 
 # Coercion De Datos
+- Es la forma en que js convierte los tipos de datos para poder manejarlos.
+    - Coercion implicita 
+        - Cuando js lo hace automaticamente.
+```js
+console.log(`a`+1) // Convierte en string el numero
+console.log(1+`a`) // Convierte en string el numero
+console.log(1 *`a`) // Nan No puede realizar esta operacion.
+console.log(`a`*1)  // NaN no puede realizar esta operacion.
+console.log(1/`a`)  // Nan No puede realizar esta operación.
+console.log(`a`/1) // NaN no puede realizar esta operación.
+console.log(1-`a`) // Nan no puede realizar la operacion.
+console.log(`a`-1)// NaN no puede realizar la Operación.
+
+
+console.log(1+`1`) // Los concatena.
+console.log(`1`+1) // Los concatena.
+console.log(1*`2`) // Si el string es numero lo conviernte en numero.
+console.log(`1`*2) // Si el string es numerico lo convierte en numero.
+console.log(2/`2`) // Si el estrin es numero lo convierte en numero.
+console.log(`2`/2) // Si el string es numero lo convierte en numero.
+console.log(1-`2`)// Si el string es numero lo convierte en numero.
+console.log(`2`-1) // Si el estring es numerico lo convierte en numero.
+
+console.log(true*4)  // Si se puede realizar la operación.
+console.log(false*5) // Si se puede realizar la operación.
+console.log(true/4) // Si se puede realizar la operación.
+console.log(false/3)// Si se puede realizar la operación.
+
+
+
+console.log(true+false) // Como son 1 y 0 Pueden sumarse.
+console.log(true+1)  // Como true es 1 si puede realizar las suma.
+console.log(`a`+true) // los concatena.
+console.log(false+`a`) // Los concatena.
+```
+    - Coercion explicita
+        - Cuando lo hacemos de manera manual
+        - Por ejemplo utilizando metodos.
 
 # true, truty y false, falsy
 
