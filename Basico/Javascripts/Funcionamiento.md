@@ -112,8 +112,141 @@
     - undefined .
     - NaN.
 
-# Desestructurar.
+# Destructuting y spreed operator(Rest y Spreed).
 
+***Spreed***
+    - Lo que  realiza el spreed es una copia de un objeto iterable. 
+    - Realiza una nueva copia que se encuentra en el heap, sin embargo ssi este tiene referencias a otros obj dentro, apuntan al mismo obj en memoria.
+```js
+let arr = [1, 2, 3]
+
+let copyArr = [...arr]
+
+console.log(copyArr);   // En este caso realiza una copia completa de los primitivos.[1,2,3]
+
+let copyArrObj = { ...arr }
+
+console.log(copyArrObj) // Si Utilizara un obj para realizar la copia sus key serian los indices del array.
+//{0:1, 1:2, 2:3}
+
+let arrWhitObj = [1, 2, 3, { 0: `b` }];
+
+let copyArrWhitObj = [...arrWhitObj]
+
+console.log(copyArrWhitObj);    // En este caso al tener un obj dentro del array comparten la misma referencia a ese obj.
+// Si yo cambiara el valor de ese obj. cambiaria el valor de la prop del obj en la copia.
+// [1,2,3,{0:`b`}]
+arrWhitObj[3][0] = `a`
+
+console.log(arrWhitObj)  // retorna [1,2,3,{0:`a`}]
+
+
+console.log(copyArrWhitObj) //[1,2,3,{0:`a`}];
+
+
+let arrSpreed = [1, 2, 3, 4];
+let arrSpreed3 = [1, 2, 3, 4];
+let arrSpreed2 = [5, 6, 7];
+let arrSpreedWhitUnd = [1, 2, 3, , 4]
+
+
+let arrSpreedResult = [...arrSpreed, ...arrSpreed2]
+
+console.log(arrSpreedResult) // Al realizar una copia superficial de ambos dentro de un array los une.
+
+let arrNotPlane = [...arrSpreed, arrSpreed2,7,8]
+
+console.log(arrNotPlane) // retornaria [1,2,3,4,[5,6,7]] Por que no estoy realizando una copia del segundo array.
+                         // Tbm puedo agregar elementos.
+
+let arrSpreedResult2 = [...arrSpreed, ...arrSpreed3];
+
+console.log(arrSpreedResult2)  // Aunque contengan valores iguales, estos son elementos distintos.
+// [1,2,3,4,1,2,3,4];
+
+
+let str = `Hola`;
+let str2 = `Bien`;
+
+let copyStr = [...str, ...str2,4,5]; // En Caso de string, realiza un array con cada caracter.
+                                 // [H,o,l,a,B,i,e,n]
+                                 // Tbm se agregan elementos.
+
+console.log(copyStr)
+
+let copyStriInObj={...str,...str2}
+
+console.log(copyStriInObj) // {0:B, 1:i, 2:e, 3:n} 
+                            // Como toma cada indice del string como key estos se sobreescriben.
+
+let obj ={
+    a:1,
+    b:2,
+    c:3
+};
+
+let copyObj={
+    a:4,
+    b:5,
+    c:6,
+};
+
+let spreedObj={...obj,...copyObj};
+
+console.log(spreedObj)  // Retona { a: 4, b:5, c:6 }
+                        // Debido a que las key son las mismas se sobreescriben con el ultimo obj
+
+
+let spreedObjWhitObj={...obj,copyObj}
+
+console.log(spreedObjWhitObj) // { a: 1, b:3, c:4, copy:Obj:{a:4,b:5,c:6, } }
+                              // Cuando agregamos un objeto sin realizar spreed toma le nombre del mismo como prop.
+
+let spreedObjWhitObj2={...obj,copyObj,h:`a`}
+
+console.log(spreedObjWhitObj2) // Solo puedo agrgar otros datos siguiendo la sintaaxis de los obj.
+                                // { a:1, b:2, c:3 , copyObj:{a:4,b:5,c:6}, h:4}
+```
+
+***Rest***
+    - El parametro rest en funciones son argumentos ilimitados que podemos agregarle a una fn
+    - Se presentan como si fuera una array. 
+    - Funciona para cualquier forma de declaracion de fn.
+
+```js
+function suma(a,b,...c){
+    let acc=a+b;
+
+   c.forEach(ele=>{
+        acc+=ele
+    })
+
+    return acc
+};
+console.log(suma(1,1,2,6))
+
+let resta=function(a,b,...c){
+    let acc=a-b;
+    c.forEach(ele=>{
+        acc+=ele
+    });
+
+    return acc;
+};
+console.log(resta(3,1,2,6,4))
+
+let multi=(a,b,...c)=>{
+    let acc=a*b;
+
+    c.forEach(ele=>{
+        acc+=ele
+    });
+
+    return acc;
+};
+
+console.log(multi(1,2,3))
+```
 # Herencia de Objetos Basado En Prototipos
 
 - Basicamente todas las estructuras de datos de js son un objetos. 

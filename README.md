@@ -27,7 +27,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Procedencia de operadores.
 - Coercion De Datos. FALTA
 - true, truty y false, falsy
-- Desestructurar.  FALTA
+- Desestructuring y spreed Operator(spredd y Rest).
 - Como funciona.
 - Tipo De Errores.
 - Herencia Basada en Prototipos.
@@ -42,10 +42,20 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Execution stacks
 - Manejo De Errores.
 - Callbacks.
-- Parametros Reset y Spreed. FALTA
+
 
 ***Tipo De Datos***
+
 - Datos primitivos.
 - Como utilizar type of 
 
+***Array***
 
+- Que es. 
+- Como Se Guardan En Memoria. 
+- Acceder a los mismos.
+- Propiedades.
+- Metodos.
+
+
+***Variables*** 
