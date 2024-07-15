@@ -23,24 +23,24 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 
 - Que es js.
 - Como esta formado.
+- Como funciona.
+- Execution stacks
+- Scoope
+- Hoisting
+- Staments.
+- Expresion
+- Valor y Referencia.
 - Tipo De Errores.
+- Manejo De Errores.
+- Tipo De Operadores.
 - Procedencia de operadores.
 - Coercion De Datos. FALTA
 - true, truty y false, falsy
 - Desestructuring y spreed Operator(spredd y Rest).
-- Como funciona.
-- Tipo De Errores.
 - Herencia Basada en Prototipos.
 - Funciones constructoras y de clase
     - This, new.
     - Extends,super.
-- Staments.
-- Expresion
-- Valor y Referencia.
-- Hoisting
-- Scoope
-- Execution stacks
-- Manejo De Errores.
 - Callbacks.
 
 

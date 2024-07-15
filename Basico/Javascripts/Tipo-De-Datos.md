@@ -229,6 +229,8 @@ let obj={
 
 ```
 # Como Preguntar que tipo de dato es 
+- Existen 2 tipos de datos que nos permiten saber que tipo de datos es (typeof)
+- Si pertenece a una instancia (instanceOf)
 
 ```js
 // preguntando el tipo de dato con () es una sintaxis-.
@@ -246,3 +248,5 @@ typeof a===typeof b;
 // preguntando si es de tipo number (CUIDADO COMO ESCRIBIS EL TIPO DE DATO POR QUE PUEDE DAR ERROR )
 typeof a =='number';
 ```
+
+
