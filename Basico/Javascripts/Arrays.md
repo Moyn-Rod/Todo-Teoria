@@ -271,7 +271,7 @@ let newArr2=arr.flat(2)
 console.log(newArr2); // retorna [1,2,3,4,5,6,7,8]
 ```
 - Array.flatMap( )
-    - Es una convinacion de flap y map.
+    - Es una combinacion de flap y map.
     - parametros
         - cb:
             - value: valor actual de elemento.

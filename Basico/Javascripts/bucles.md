@@ -91,3 +91,35 @@ for (const [i,j] of arr) {
 ```
 
 ***Objetos***
+- Como los objetos literales no son iterables, se debe utilizar distintas metodos que poseen los mismos.
+    - obj.entries: retorna clave valor.
+    - obj.value: retorna los valores.
+    - obj.keys: retorna las prop.
+
+```js
+let obj={
+    name:`a`,
+    lastname:`b`
+};
+
+for (const i of Object.keys(obj)) {
+    console.log(i)
+};  // retorna 
+    //name
+    //lastname
+
+for (const i of Object.values(obj)) {
+        console.log(i);
+}; // retorna
+    //`a`
+    //`b`
+
+
+for( [key,value] of Object.entries(obj)){
+    console.log(`key:${key} \n value:${value}`);
+};  // retorna
+    // key:name
+    //value:a
+    //key:lastname
+    //value:b
+```
