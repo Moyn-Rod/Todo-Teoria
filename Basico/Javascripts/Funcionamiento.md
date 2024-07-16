@@ -423,6 +423,34 @@ console.log(false+`a`) // Los concatena.
         - Cuando lo hacemos de manera manual
         - Por ejemplo utilizando metodos.
 
+```js
+     Números
+
+    Number(false) // 0
+    Number("10") // 10
+    Number("") // 0
+    Number(null) // 0
+    Number(undefined) // NaN
+
+    Texto
+
+    String(25) // "25"
+    String(true) // "true"
+    String("42") // "42"
+    String(-10.5) // "-10.5"
+    String(null) // "null"
+    String(undefined) // "undefined"
+
+    Boolean
+
+    Boolean(null) // false
+    Boolean(1) // true
+    Boolean("") // false
+    Boolean(NaN) // false
+    Boolean(undefined) // false
+
+```
+
 # true, truty y false, falsy
 
 - true y false son valores booleanos que representan verdad y falsedad.

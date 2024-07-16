@@ -34,9 +34,9 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 - Manejo De Errores.
 - Tipo De Operadores.
 - Procedencia de operadores.
-- Coercion De Datos. FALTA
+- Coercion De Datos.
 - true, truty y false, falsy
-- Desestructuring y spreed Operator(spredd y Rest).
+- Desestructuring y spreed Operator(spreed y Rest).
 - Herencia Basada en Prototipos.
 - Funciones constructoras y de clase
     - This, new.
