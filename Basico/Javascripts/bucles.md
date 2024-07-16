@@ -55,4 +55,39 @@ console.log(`Esto es j en ambito global`,j);
 SE DEBE VER PROMESAS.
 
 ***for of***
-- 
+- Permite iterar sobre cualquier estructura de datos iterable.
+- itera directamente sobre los elementos sin necesidad de manejar indices o gestionar la iteración.
+    - array.
+    - objetos iterables.
+    - string.
+    - map.
+    - set.
+- Es una forma mas moderna de iterar (ES6).
+
+***array***
+- Puede iterar directamente.
+```js
+let arr=[[1,5,[11,12]],[2,6],[3,7,9]];
+for (const i of arr) {
+    console.log(i); //  si yo no hago destructuring me devolveria cada elemento del primer array.
+};                  // [ 1, 5, [ 11, 12 ] ] 
+                    // [ 2, 6 ] 
+                    //[ 3, 7, 9 ]
+
+for (const [i] of arr) {
+    console.log(i); // Al hacer destructuring estoy desestructurando cada sub-array y devolviendo 
+                    //el primer  elemento  de   los mismos.
+};                  //1
+                    //2
+                    //3
+
+for (const [i,j] of arr) {
+    console.log(i,j); //  si yo agrego mas variables cada variable estara tomando el segundo valor de  cada
+                      // subarray, y asi sucesivamente.
+};                    //1 5
+                     //2 6
+                     //3 7
+
+```
+
+***Objetos***
