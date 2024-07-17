@@ -48,6 +48,7 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 
 - Datos primitivos.
 - Como utilizar type of 
+- instance of.
 
 ***Array***
 
@@ -59,3 +60,26 @@ Aqui podras encontrar todo lo necesario que debes saber para poder programar.
 
 
 ***Variables*** 
+- Que son.
+- var.
+- let.
+- const.
+
+***funciones***
+
+***Bucles***
+- Que son.
+- for.
+- for await of (ver promesas primero).
+- for of.
+- for in. 
+- while.
+- do while.
+- break && continue.
+
+***Objetos***
+
+
+***Asincrono***
+
+***Formato de datos***
