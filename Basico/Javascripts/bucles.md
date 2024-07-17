@@ -2,7 +2,7 @@
 - Los bucles son estructuras de control de flujo que van a repetir el codigo hasta que se cumpla una cierta condición.
 - Pueden recorrer cualquier tipo de dato.
 - BUENA PRACTICA UTILIZAR LET Y CONST EN BUCLES.
-***For**
+# For
 
 - El bucle for posee 3 parametros.
 - Parametros.
@@ -47,7 +47,7 @@ for (let j=0; j < arr.length; j++) {
 console.log(`Esto es j en ambito global`,j);
 ```
 
-***for await of***
+# for await of
 - Se utiliza para recorrer estructuras de datos que son iterables, que devuelven una operacion asincrona como una promesa.
 - Es buena practica utilizarlo con async await.
 
@@ -123,7 +123,7 @@ for( [key,value] of Object.entries(obj)){
     //key:lastname
     //value:b
 ```
-***for in***
+# for in
 - Se utiliza para recorrer las propiedades emnumerables de los objetos.
 - Es decir recorre sus propiedades 
 - El bucle for in itera tbm sobre las propiedades heredadas  y que se encuentran en su prototipo por eso es conveniente utilizar hasOwnProperty
@@ -175,7 +175,7 @@ for (let key in ricardo) {
 };   // Para que no devuelva las propiedades heredadas podria utilizar un hasOwnProperty para que tome en cuenta unicamente las propiedades que posea el obj en si.
 
 ```
-***while***
+# while
 - Se ejecuta mientras se cumpla la condición.
 - Es bueno para cuando no sabes cuantas veces se  necesita repetir el codigo. 
 - La condición se evalua en cada iteración, desde la primera iteración.
@@ -191,7 +191,7 @@ while(num>2){
 
 console.log(`ESTO ES NUM`,num); // num queda con el valor esperado ya que while resto 2 por  cada iteracion hasta que la condicion fue false.
 ```
-***do while***
+# do while
 - La diferencia con while es que el codigo al menos se ejecuta 1 vez, antes de evaluar la condición.
 - Se ejecuta hasta que la condición sea false.
 
@@ -208,4 +208,45 @@ do {
 ```
 
 ***switch**
-- Switch evalua cada caso por separado y ejecuta un bloque codigo segun la condición evaluada.
+- Switch  es una alternativa a if else.
+- Evalua el valor  de una expresion y en funcion de eso ejecuta un bloque de codigo.
+- Continuara ejecutandose hasta que encuentre un break.
+- posee un caso default por si no se ejecuta ninguno de los casos.
+```js
+let day=1;
+
+switch (day) {
+    case 1:
+        console.log(`Miercoles`);
+        break;
+    case 2:
+        console.log(`jueves`);
+    default:
+        console.log(`No Coindice con ninguno`);
+        break;
+};  // En este caso retorna miercoles por que coincide con el caso.
+
+
+let num=2;
+
+switch(num){
+    case 1:
+        console.log(`Es 1`);
+        break;
+    case 2:
+        console.log(`es 2`);
+    case 3:
+        console.log(`se va a ver por que no tiene un brek`);
+        break;
+    default:
+        console.log(`No coincidio`);
+        break;
+}; // En este caso retorna el caso 2 y 3 por que no posee un break
+```
+# Break && Continue
+
+***break***
+- Detiene el flujo de control oel switch y salta a la primera linea de codigo despues del bucle.
+
+***continue***
+- Salta una iteracion segun la condicion que pongamos.
