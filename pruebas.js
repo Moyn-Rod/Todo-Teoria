@@ -12,6 +12,27 @@ let x = `1`,
 
 
 
+function Persona(nombre,age){
+    this.name=nombre;
+    this.age=age;
+};
+
+Persona.prototype.lastName=`rayos`;
+
+
+let ricardo=new Persona(`rodrigo`,`28`);
+
+// console.log(ricardo);
+// console.log(ricardo.lastName)
+
+// for (const key in ricardo) {
+//     console.log(key);
+// };  // En este caso retornaria name agre y lastname por que aunque este  en el prototipo de el obj sigue siendo una propiedad.
+
+
+
+
+                                                
 
 
 

@@ -123,3 +123,55 @@ for( [key,value] of Object.entries(obj)){
     //key:lastname
     //value:b
 ```
+***for in***
+- Se utiliza para recorrer las propiedades emnumerables de los objetos.
+- Es decir recorre sus propiedades 
+- El bucle for in itera tbm sobre las propiedades heredadas  y que se encuentran en su prototipo por eso es conveniente utilizar hasOwnProperty
+ 
+```js
+let obj ={
+    nombre:'Rodrigo',
+    edad:26,
+    lastName:'Nicolas'
+};
+
+let property=``
+for (const key in obj) {
+    console.log(property=`key:${key}\n value: ${obj[key]}`);
+};                                                          // retorna 
+                                                            //key:`nombre` 
+                                                            //value:`Rodrigo`, 
+                                                            //key:`Edad` 
+                                                            //value:`26`,
+                                                            // key`Lastname` 
+                                                            //value:`Nicolas`.
+
+for(const key in obj){
+    console.log(key);
+};                     //Retona: nombre, edad,lastname, solo itera por sus propiedades emnumerables.
+                       // para saber los valores debo ingresar a cada propiedades obj[key];
+---------------------------------
+function Persona(nombre,age){
+    this.name=nombre;
+    this.age=age;
+};
+
+Persona.prototype.lastName=`rayos`;
+
+
+let ricardo=new Persona(`rodrigo`,`28`);
+
+// console.log(ricardo);
+// console.log(ricardo.lastName)
+
+for (const key in ricardo) {
+    console.log(key);
+};  // En este caso retornaria name agre y lastname por que aunque este  en el prototipo de el obj sigue siendo una propiedad.
+
+for (let key in ricardo) {
+    if(ricardo.hasOwnProperty(key)){
+        console.log(key);  
+    } ;
+};   // Para que no devuelva las propiedades heredadas podria utilizar un hasOwnProperty para que tome en cuenta unicamente las propiedades que posea el obj en si.
+
+```
