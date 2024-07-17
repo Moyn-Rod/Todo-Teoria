@@ -178,7 +178,7 @@ for (let key in ricardo) {
 ***while***
 - Se ejecuta mientras se cumpla la condición.
 - Es bueno para cuando no sabes cuantas veces se  necesita repetir el codigo. 
-- La condición se evalua en cada iteración.
+- La condición se evalua en cada iteración, desde la primera iteración.
     - Si es verdadera sigue ejecutando, si es false se detiene.
 - Precaución a los bucles infinitos.
 ```js
@@ -191,3 +191,21 @@ while(num>2){
 
 console.log(`ESTO ES NUM`,num); // num queda con el valor esperado ya que while resto 2 por  cada iteracion hasta que la condicion fue false.
 ```
+***do while***
+- La diferencia con while es que el codigo al menos se ejecuta 1 vez, antes de evaluar la condición.
+- Se ejecuta hasta que la condición sea false.
+
+```js
+
+let num=1
+
+do {
+    num++
+    console.log(num);
+} while (num===2); // En este caso primero se ejecuta el codigo antes de evaluar la condición. es decir num se hace 2.
+                    // se evalua la condición num es estrictamente 2 entonces es true sigue ejecutando.
+                    // num se hace 3, la condición de uqe num sea 2 da false entonces corta el codigo. 
+```
+
+***switch**
+- Switch evalua cada caso por separado y ejecuta un bloque codigo segun la condición evaluada.
