@@ -175,3 +175,19 @@ for (let key in ricardo) {
 };   // Para que no devuelva las propiedades heredadas podria utilizar un hasOwnProperty para que tome en cuenta unicamente las propiedades que posea el obj en si.
 
 ```
+***while***
+- Se ejecuta mientras se cumpla la condición.
+- Es bueno para cuando no sabes cuantas veces se  necesita repetir el codigo. 
+- La condición se evalua en cada iteración.
+    - Si es verdadera sigue ejecutando, si es false se detiene.
+- Precaución a los bucles infinitos.
+```js
+let num=10;
+
+while(num>2){
+    num-=2;
+    console.log(num);
+};
+
+console.log(`ESTO ES NUM`,num); // num queda con el valor esperado ya que while resto 2 por  cada iteracion hasta que la condicion fue false.
+```
